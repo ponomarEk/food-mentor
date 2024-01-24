@@ -1,14 +1,21 @@
-import foodMentorLogo from '../assets/food-mentor-logo.png';
-import { ReactComponent as LeftIcon } from '../assets/left.svg';
+import styled from 'styled-components';
+
+import Header from './Header';
+
+const Container = styled.div`
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+`;
 
 const Layout = ({ children }) => {
   return (
-    <div>
-      <LeftIcon title="Back button" />
-      <img src={foodMentorLogo} alt="Food mentor logo" />
-      <h2>Food Mentor</h2>
-      <div>{children}</div>
-    </div>
+    <Container>
+      <Header />
+      <main>
+        <section>{children}</section>
+      </main>
+    </Container>
   );
 };
 

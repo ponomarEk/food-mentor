@@ -29,10 +29,6 @@ module.exports = {
           ['internal', 'parent', 'sibling', 'index'],
         ],
         'newlines-between': 'always',
-        alphabetize: {
-          order: 'asc',
-          caseInsensitive: false,
-        },
       },
     ],
   },
