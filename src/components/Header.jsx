@@ -11,9 +11,10 @@ export const HeaderComponent = styled.header`
 `;
 
 export const HeaderName = styled.h1`
-  font-size: 1.5rem;
+  font-size: 18px;
   margin: 0;
   margin-left: 10px;
+  color: #374234;
 `;
 
 const Header = () => {

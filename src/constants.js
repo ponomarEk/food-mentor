@@ -6,4 +6,23 @@ const ROUTES = {
   EXERCISE: '/exercise',
 };
 
-export { ROUTES };
+const SECTIONS_HEADER_INFO = {
+  GOAL: {
+    title: 'The Goal',
+    caption: 'Focus on the health benefits you need.\nBalanced nutrition will let you achieve them',
+  },
+  MEASUREMENT: {
+    title: 'Measure Yourself',
+    caption: 'What are your height and body weight? ',
+  },
+  BEHAVIOURS: {
+    title: 'Destructive behaviors',
+    caption: 'We all have them! Which are yours?',
+  },
+  EXERCISE: {
+    title: 'Physical exercise',
+    caption: 'Physical exercise means a lot for a woman who\nwants to lose kilos and works at the office',
+  },
+};
+
+export { ROUTES, SECTIONS_HEADER_INFO };
