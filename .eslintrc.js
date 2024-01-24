@@ -49,6 +49,12 @@ module.exports = {
     node: true,
   },
   settings: {
+    'import/resolver': {
+      node: {
+        extensions: ['.js', '.jsx', '.json'],
+        paths: ['src'],
+      },
+    },
     react: {
       version: 'detect',
     },

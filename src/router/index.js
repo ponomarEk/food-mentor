@@ -1,6 +1,7 @@
 import { Navigate, createBrowserRouter } from 'react-router-dom';
 
 import { ROUTES } from '../constants';
+import { BehavioursPage, ExercisePage, GoalPage, MeasurementPage } from '../pages';
 
 export const router = createBrowserRouter([
   {
@@ -10,18 +11,18 @@ export const router = createBrowserRouter([
   },
   {
     path: ROUTES.GOAL,
-    element: <>Goal</>,
+    element: <GoalPage />,
   },
   {
     path: ROUTES.MEASUREMENT,
-    element: <>Measurement</>,
+    element: <MeasurementPage />,
   },
   {
     path: ROUTES.BEHAVIOURS,
-    element: <>Behaviours</>,
+    element: <BehavioursPage />,
   },
   {
     path: ROUTES.EXERCISE,
-    element: <>Exercise</>,
+    element: <ExercisePage />,
   },
 ]);
