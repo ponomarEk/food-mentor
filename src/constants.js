@@ -25,4 +25,9 @@ const SECTIONS_HEADER_INFO = {
   },
 };
 
-export { ROUTES, SECTIONS_HEADER_INFO };
+const KEYBOARD_KEYS = {
+  ENTER: 'Enter',
+  SPACE: ' ',
+};
+
+export { KEYBOARD_KEYS, ROUTES, SECTIONS_HEADER_INFO };
