@@ -13,13 +13,20 @@ const Container = styled.div`
   margin: 0 auto;
 `;
 
+const Section = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`;
+
 const Layout = ({ sectionTitle, sectionCaption, children }) => {
   return (
     <Container>
       <Header />
       <main>
         <SectionHeader title={sectionTitle} caption={sectionCaption} />
-        <section>{children}</section>
+        <Section>{children}</Section>
       </main>
     </Container>
   );

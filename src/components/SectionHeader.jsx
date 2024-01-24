@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const Section = styled.section`
   text-align: center;
-  margin-top: 30px;
+  margin-top: 15px;
 `;
 
 const Title = styled.h2`

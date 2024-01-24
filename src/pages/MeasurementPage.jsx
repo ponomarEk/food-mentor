@@ -1,5 +1,6 @@
 import ContinueButton from '../components/ContinueButton';
 import Layout from '../components/Layout';
+import Measurement from '../components/measurement/Measurement';
 import { ROUTES, SECTIONS_HEADER_INFO } from '../constants';
 
 const MeasurementPage = () => {
@@ -7,6 +8,7 @@ const MeasurementPage = () => {
 
   return (
     <Layout sectionTitle={title} sectionCaption={caption}>
+      <Measurement />
       <ContinueButton routePath={ROUTES.BEHAVIOURS} />
     </Layout>
   );

@@ -25,9 +25,14 @@ const SECTIONS_HEADER_INFO = {
   },
 };
 
+const ADDITIONAL_QUESTIONS = {
+  GOAL: 'What are your goals?',
+  EXERCISE: 'How active are you during the day?',
+};
+
 const KEYBOARD_KEYS = {
   ENTER: 'Enter',
   SPACE: ' ',
 };
 
-export { KEYBOARD_KEYS, ROUTES, SECTIONS_HEADER_INFO };
+export { ADDITIONAL_QUESTIONS, KEYBOARD_KEYS, ROUTES, SECTIONS_HEADER_INFO };
