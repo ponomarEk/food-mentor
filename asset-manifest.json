@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/food-mentor/static/css/main.e6c13ad2.css",
+    "main.js": "/food-mentor/static/js/main.667eccbb.js",
+    "static/media/active-girl.png": "/food-mentor/static/media/active-girl.eb08ae39e48f94eac75c.png",
+    "static/media/left.svg": "/food-mentor/static/media/left.deca36128ea2e55da8de766aec6f2ac3.svg",
+    "index.html": "/food-mentor/index.html",
+    "main.e6c13ad2.css.map": "/food-mentor/static/css/main.e6c13ad2.css.map",
+    "main.667eccbb.js.map": "/food-mentor/static/js/main.667eccbb.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.667eccbb.js"
+  ]
+}
