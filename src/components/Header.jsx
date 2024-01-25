@@ -1,6 +1,8 @@
+import { useLocation } from 'react-router-dom';
 import styled from 'styled-components';
 
 import foodMentorLogo from '../assets/food-mentor-logo.png';
+import { ROUTES } from '../constants';
 import BackButton from './BackButton';
 
 export const HeaderComponent = styled.header`
@@ -18,9 +20,11 @@ export const HeaderName = styled.h1`
 `;
 
 const Header = () => {
+  const { pathname } = useLocation();
+
   return (
     <HeaderComponent>
-      <BackButton />
+      {pathname !== ROUTES.GOAL && <BackButton />}
       <img src={foodMentorLogo} alt="Food mentor logo" />
       <HeaderName>Food Mentor</HeaderName>
     </HeaderComponent>

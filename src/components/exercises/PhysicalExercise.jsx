@@ -21,8 +21,14 @@ const ExerciseName = styled.p`
 `;
 
 const PhysicalExercise = ({ exercise }) => {
+  const ce = 'Hardly at all';
+
   return (
-    <Exercise tabIndex={0} role="button">
+    <Exercise
+      tabIndex={0}
+      role="button"
+      style={{ ...(ce === exercise ? { outline: '2px solid rgba(95, 203, 57)' } : {}) }}
+    >
       <ExerciseName>{exercise}</ExerciseName>
     </Exercise>
   );

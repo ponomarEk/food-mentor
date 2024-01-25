@@ -24,6 +24,7 @@ const GoalName = styled.p`
 `;
 
 const Goal = ({ goal }) => {
+  const chosenGoal = 'Lose Weight';
   const handleGoalClick = (e) => {
     console.log(e.target);
   };
@@ -35,7 +36,14 @@ const Goal = ({ goal }) => {
   };
 
   return (
-    <GoalCard role="button" key={goal.title} tabIndex={0} onClick={handleGoalClick} onKeyDown={handleKeyDown}>
+    <GoalCard
+      role="button"
+      key={goal.title}
+      tabIndex={0}
+      onClick={handleGoalClick}
+      onKeyDown={handleKeyDown}
+      style={{ ...(chosenGoal === goal.title ? { outline: '2px solid rgba(95, 203, 57)' } : {}) }}
+    >
       <GoalName>{goal.title}</GoalName>
       <img alt="Goal item" src={goal.src} />
     </GoalCard>

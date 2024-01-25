@@ -16,16 +16,19 @@ const UnitButtonsContainer = styled.div`
   margin-bottom: 20px;
 `;
 
+//      <--- TODO make a variable--->
+
 const Measurement = () => {
+  const measureType = 'metric';
   return (
     <MeasurementContainer>
       <UnitButtonsContainer>
-        {MEASURE_UNITS.map((unit) => (
+        {Object.values(MEASURE_UNITS).map((unit) => (
           <MeasureUnitButton key={unit} buttonName={unit} />
         ))}
       </UnitButtonsContainer>
-      <TextField placeholder="Height" />
-      <TextField placeholder="Current weight" />
+      <TextField placeholder={`Height ${measureType === MEASURE_UNITS.METRIC ? '(cm)' : '(ft)'}`} />
+      <TextField placeholder={`Current weight ${measureType === MEASURE_UNITS.METRIC ? '(kg)' : '(lb)'}`} />
     </MeasurementContainer>
   );
 };

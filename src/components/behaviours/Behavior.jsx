@@ -22,8 +22,13 @@ const BehaviourName = styled.p`
 `;
 
 const Behaviour = ({ behaviour }) => {
+  const chosenBehaviour = 'I dont rest enough';
   return (
-    <BehaviourCard tabIndex={0} role="button">
+    <BehaviourCard
+      tabIndex={0}
+      role="button"
+      style={{ ...(chosenBehaviour === behaviour.title ? { outline: '2px solid rgba(95, 203, 57)' } : {}) }}
+    >
       <img src={behaviour.src} alt={behaviour.title} />
       <BehaviourName>{behaviour.title}</BehaviourName>
     </BehaviourCard>
