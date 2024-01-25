@@ -16,5 +16,4 @@ You may also see any lint errors in the console.
 
 ### Deployment
 
-Deployed with help og Github Pages here: [https://facebook.github.io/create-react-app/docs/deployment]
-
+Deployed with help og Github Pages here: [https://ponomarek.github.io/food-mentor/]
