@@ -1,5 +1,8 @@
 import styled from 'styled-components';
 
+import { KEYBOARD_KEYS } from '../../constants';
+import { useAppData } from '../../hooks/useAppData';
+
 const BehaviourCard = styled.div`
   display: flex;
   padding: 20px;
@@ -22,12 +25,27 @@ const BehaviourName = styled.p`
 `;
 
 const Behaviour = ({ behaviour }) => {
-  const chosenBehaviour = 'I dont rest enough';
+  const { currentBehaviour, setCurrentBehaviour } = useAppData();
+
+  const handleBehaviourClick = () => {
+    setCurrentBehaviour(behaviour.title);
+  };
+
+  const handleKeyDown = (e) => {
+    if (e.key === KEYBOARD_KEYS.ENTER || e.key === KEYBOARD_KEYS.SPACE) {
+      handleBehaviourClick();
+    }
+  };
+
+  const isChosen = currentBehaviour === behaviour.title;
+
   return (
     <BehaviourCard
       tabIndex={0}
       role="button"
-      style={{ ...(chosenBehaviour === behaviour.title ? { outline: '2px solid rgba(95, 203, 57)' } : {}) }}
+      onClick={handleBehaviourClick}
+      onKeyDown={handleKeyDown}
+      style={isChosen ? { outline: '2px solid rgba(95, 203, 57)' } : {}}
     >
       <img src={behaviour.src} alt={behaviour.title} />
       <BehaviourName>{behaviour.title}</BehaviourName>

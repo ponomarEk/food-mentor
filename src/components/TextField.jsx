@@ -12,8 +12,8 @@ const InputField = styled.input`
   box-sizing: border-box;
 `;
 
-const TextField = ({ placeholder }) => {
-  return <InputField placeholder={placeholder} />;
+const TextField = ({ placeholder, onChange, value }) => {
+  return <InputField value={value} placeholder={placeholder} onChange={onChange} />;
 };
 
 export default TextField;

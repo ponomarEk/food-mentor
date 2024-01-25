@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 import { KEYBOARD_KEYS } from '../../constants';
+import { useAppData } from '../../hooks/useAppData';
 
 const GoalCard = styled.div`
   display: flex;
@@ -11,6 +12,7 @@ const GoalCard = styled.div`
   align-items: center;
   padding: 0 10px;
   box-sizing: border-box;
+  cursor: pointer;
   &:hover {
     outline: 2px solid rgba(95, 203, 57, 0.3);
   }
@@ -24,9 +26,12 @@ const GoalName = styled.p`
 `;
 
 const Goal = ({ goal }) => {
-  const chosenGoal = 'Lose Weight';
-  const handleGoalClick = (e) => {
-    console.log(e.target);
+  const { currentGoal, setCurrentGoal } = useAppData();
+
+  const isChosen = currentGoal === goal.title;
+
+  const handleGoalClick = () => {
+    setCurrentGoal(goal.title);
   };
 
   const handleKeyDown = (e) => {
@@ -42,7 +47,7 @@ const Goal = ({ goal }) => {
       tabIndex={0}
       onClick={handleGoalClick}
       onKeyDown={handleKeyDown}
-      style={{ ...(chosenGoal === goal.title ? { outline: '2px solid rgba(95, 203, 57)' } : {}) }}
+      style={{ ...(isChosen ? { outline: '2px solid rgba(95, 203, 57)' } : {}) }}
     >
       <GoalName>{goal.title}</GoalName>
       <img alt="Goal item" src={goal.src} />

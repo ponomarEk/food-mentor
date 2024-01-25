@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
-import { GOALS } from './constants';
 import Goal from './Goal';
+import { GOALS } from './constants';
 
 const GoalCards = styled.div`
   display: flex;

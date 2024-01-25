@@ -10,6 +10,7 @@ const UnitButton = styled.button`
   text-transform: uppercase;
   letter-spacing: 2.5px;
   background: #ffffff;
+  cursor: pointer;
   &:first-child {
     border-right: none;
     border-top-left-radius: 10px;
@@ -22,8 +23,16 @@ const UnitButton = styled.button`
   }
 `;
 
-const MeasureUnitButton = ({ buttonName }) => {
-  return <UnitButton>{buttonName}</UnitButton>;
+const MeasureUnitButton = ({ buttonName, onClick, isChosen, onKeyDown }) => {
+  return (
+    <UnitButton
+      style={isChosen ? { background: 'rgba(95, 203, 57, 0.3)' } : {}}
+      onClick={onClick}
+      onKeyDown={onKeyDown}
+    >
+      {buttonName}
+    </UnitButton>
+  );
 };
 
 export default MeasureUnitButton;
