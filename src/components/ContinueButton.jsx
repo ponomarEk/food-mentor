@@ -12,12 +12,14 @@ const StyledButton = styled.button`
   border-radius: 12px;
   border: none;
   cursor: pointer;
+  transition: opacity 0.8s ease;
   &:disabled {
-    opacity: 30%;
+    opacity: 0.3;
+    cursor: not-allowed;
   }
 `;
 
-const ContinueButton = ({ routePath }) => {
+const ContinueButton = ({ routePath, disabled }) => {
   const navigateTo = useNavigate();
 
   const handleButtonClick = () => {
@@ -31,7 +33,7 @@ const ContinueButton = ({ routePath }) => {
   };
 
   return (
-    <StyledButton tabIndex={0} onClick={handleButtonClick} onKeyDown={handleKeyDown} disabled={false}>
+    <StyledButton tabIndex={0} onClick={handleButtonClick} onKeyDown={handleKeyDown} disabled={disabled}>
       Continue
     </StyledButton>
   );
