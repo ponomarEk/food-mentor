@@ -1,9 +1,9 @@
-import { Navigate, createBrowserRouter } from 'react-router-dom';
+import { Navigate, createHashRouter } from 'react-router-dom';
 
 import { ROUTES } from '../constants';
 import { BehavioursPage, ExercisePage, GoalPage, MeasurementPage } from '../pages';
 
-export const router = createBrowserRouter([
+export const router = createHashRouter([
   {
     path: ROUTES.ROOT,
     element: <Navigate to={ROUTES.GOAL} />,
